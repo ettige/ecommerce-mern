@@ -4,6 +4,9 @@ This Project shows an full stack ecommerce MERN website.
 [`nextjs`](https://nextjs.org/docs/app)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Internatinalization
+i'm using [Paraglide-next](https://inlang.com/m/osslbuzt/paraglide-next-i18n/get-started)
 ## Getting Started
 
 First, run the development server:
