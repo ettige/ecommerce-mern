@@ -5,6 +5,7 @@ import * as m from "@/paraglide/messages.js"
 import type { Metadata } from "next";
 import { Geist, Geist_Mono,Vazirmatn } from "next/font/google";
 import "./globals.css";
+import { Header } from "./components/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,9 +44,10 @@ export default function RootLayout({
     <LanguageProvider>
    <html lang={languageTag()}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${vazirmatnSans.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${vazirmatnSans.variable}  antialiased`}
         dir={direction[languageTag()]}
       >
+        <Header/>
         {children}
       </body>
     </html>

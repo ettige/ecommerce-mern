@@ -1,5 +1,6 @@
 {
     "$schema": "https://inlang.com/schema/inlang-message-format",
     "home_metadata_title": "تایتل",
-    "home_metadata_description": "توضیحات"
+    "home_metadata_description": "توضیحات",
+    "header_search_placeholder":"جستو جوی کالا ..."
 }
