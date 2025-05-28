@@ -3,9 +3,10 @@ import { AvailableLanguageTag, languageTag } from "@/paraglide/runtime.js"
 import * as m from "@/paraglide/messages.js"
 
 import type { Metadata } from "next";
-import { Geist, Geist_Mono,Vazirmatn } from "next/font/google";
+import { Geist, Geist_Mono, Vazirmatn } from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/header";
+import { Footer } from "./components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,10 +22,10 @@ const vazirmatnSans = Vazirmatn({
   subsets: ["arabic"],
 });
 export async function generateMetadata() {
-	return {
-		title: m.home_metadata_title(),
-		description: m.home_metadata_description(),
-	}
+  return {
+    title: m.home_metadata_title(),
+    description: m.home_metadata_description(),
+  }
 }
 // export const metadata: Metadata = {
 //   title: "Create Next App",
@@ -32,8 +33,8 @@ export async function generateMetadata() {
 // };
 // This is type-safe & forces you to keep it up-to-date
 const direction: Record<AvailableLanguageTag, "rtl" | "ltr"> = {
-	en: "ltr",
-	fa: "rtl",
+  en: "ltr",
+  fa: "rtl",
 }
 export default function RootLayout({
   children,
@@ -42,15 +43,16 @@ export default function RootLayout({
 }>) {
   return (
     <LanguageProvider>
-   <html lang={languageTag()}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${vazirmatnSans.variable}  antialiased`}
-        dir={direction[languageTag()]}
-      >
-        <Header/>
-        {children}
-      </body>
-    </html>
- </LanguageProvider>
+      <html lang={languageTag()}>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} ${vazirmatnSans.variable}  antialiased`}
+          dir={direction[languageTag()]}
+        >
+          <Header />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </LanguageProvider>
   );
 }

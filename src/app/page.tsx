@@ -1,13 +1,20 @@
 import Image from "next/image";
-
+import products from "../../products"
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        Some Eccomerce Website
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-      </footer>
-    </div>
+    <main className="">
+      <h1 className="text-2xl font-semibold mb-4">Latest Products</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {products.map((product) => (
+          <div key={product._id} className="border rounded-xl p-4 shadow-sm hover:shadow-md transition">
+            <img src={product.image} alt={product.name} className="w-full h-40 object-cover rounded-md mb-2" />
+            <h2 className="text-lg font-medium">{product.name}</h2>
+          </div>
+        ))}
+      </div>
+    </main>
   );
 }
+      // <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      
+      // </main>
