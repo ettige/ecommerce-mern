@@ -3,5 +3,6 @@
     "home_metadata_title": "Title",
     "home_metadata_description": "Description",
     "header_search_placeholder": "Search Products ...",
-    "header_singup_button":"Sing up / Login "
+    "header_singup_button":"Sing up / Login ",
+    "header_cart_button":"Cart"
 }

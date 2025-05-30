@@ -3,5 +3,6 @@
     "home_metadata_title": "تایتل",
     "home_metadata_description": "توضیحات",
     "header_search_placeholder":"جستو جوی کالا ...",
-    "header_singup_button":"ثبت نام / ورود"
+    "header_singup_button":"ثبت نام / ورود",
+    "header_cart_button":"سبد خرید"
 }

@@ -2,7 +2,7 @@ import { LanguageProvider } from "@inlang/paraglide-next"
 import { AvailableLanguageTag, languageTag } from "@/paraglide/runtime.js"
 import * as m from "@/paraglide/messages.js"
 
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import { Geist, Geist_Mono, Vazirmatn } from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/header";
@@ -45,7 +45,7 @@ export default function RootLayout({
     <LanguageProvider>
       <html lang={languageTag()}>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} ${vazirmatnSans.variable}  antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} ${vazirmatnSans.variable}  antialiased min-h-screen text-center`}
           dir={direction[languageTag()]}
         >
           <Header />

@@ -1,15 +1,10 @@
 "use client"
-import { useState } from "react";
-import { Menu, Search, X } from "lucide-react";
+import {  Search, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input"
 import * as m from "@/paraglide/messages.js"
 
 export const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-
   return (
     <header className="bg-white shadow-md sticky p-5 top-0 z-50">
       <div className="flex flex-wrap flex-col gap-8 md:flex-row md:gap-50">
@@ -42,13 +37,17 @@ export const Header = () => {
           </div>
         </div>
         <div className="hidden md:flex">
-          <Button className="">
+          <Button className=""  >
             {m.header_singup_button()}
+          </Button>
+          <Button className="" variant={"link"}>
+            <ShoppingCart />
+            {m.header_cart_button()}
           </Button>
         </div>
       </div>
       <nav className="hidden md:block">
-        
+
       </nav>
     </header>
   );
